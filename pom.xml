@@ -10,18 +10,17 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
-			<scope>provided</scope>
+		  <groupId>javax.servlet</groupId>
+		  <artifactId>javax.servlet-api</artifactId>
+		  <version>3.1.0</version>
 		</dependency>
+
 		<dependency>
-			<groupId>javax.servlet.jsp</groupId>
-			<artifactId>javax.servlet.jsp-api</artifactId>
-			<version>2.3.1</version>
-			<scope>provided</scope>
+		  <groupId>javax.servlet.jsp</groupId>
+		  <artifactId>javax.servlet.jsp-api</artifactId>
+		  <version>2.3.1</version>
 		</dependency>
-	</dependencies>
+		</dependencies>
 
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -44,20 +43,14 @@
 			</plugin>
 		</plugins>
 	</build>
-	<repositories>
-	    <repository>
-	      <id>maven-group</id>
-	      <url>http://35.154.2.135:8081/repository/maven-group/</url>
-	    </repository>
-	  </repositories>
 	<distributionManagement>
-	    <snapshotRepository>
-	      <id>nexus-snapshots</id>
-		 <url>http://35.154.2.135:8081/repository/maven-snapshots/</url>
-    	    </snapshotRepository>
-            <repository>
-	      <id>nexus-releases</id>
-		 <url>http://35.154.2.135:8081/repository/maven-releases/</url>
-	    </repository>
-  </distributionManagement>
+		<repository>
+	    <id>releases</id>
+		    <url>http://35.154.2.135:8081/nexus/content/repositories/releases/</url>
+		  </repository>
+	  <snapshotRepository>
+	    <id>snapshots</id>
+	    <url>http://35.154.2.135:8081/nexus/content/repositories/snapshots/</url>
+	  </snapshotRepository>
+	</distributionManagement>
 </project>
